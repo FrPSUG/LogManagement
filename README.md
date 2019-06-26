@@ -19,7 +19,7 @@ Please vote and submit your ideas in issues.
 * Use PowerShell Classes
 * 2 commands:
    * Write Log (used to write in a new or existing log file)
-   * Rotate Log (used to 
+   * Rotate Log (used to delete old logs, specified by a specific date or number of days)
 * Support Pipeline
 * Support Windows PowerShell/PSCore
 * Support Windows/Linux
