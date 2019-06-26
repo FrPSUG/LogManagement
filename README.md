@@ -52,3 +52,9 @@ Please vote and submit your ideas in issues.
 
 * Write-LogMessage
 * Rotate-LogMessage
+
+
+## To validate
+
+* Support for Credential
+* Support for PSDrive ?
