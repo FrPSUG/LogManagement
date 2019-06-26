@@ -2,6 +2,15 @@
 
 Community module to create and manage log files
 
+## Use cases
+
+* Log during script runtime
+* Performance aspects to keep in mind
+   * High volume of write to disk
+   * Support to write to same file, or retries
+   * Possibly support parallel threads
+   * Write to share
+
 ## Requirements
 
 Please vote and submit your ideas in issues.
@@ -11,8 +20,8 @@ Please vote and submit your ideas in issues.
 * Test Driven Development (build Pester tests first)
 * Use PowerShell Classes
 * 2 commands:
-   * Write Log
-   * Rotate Log
+   * Write Log (used to write in a new or existing log file)
+   * Rotate Log (used to 
 * Support Pipeline
 * Support Windows PowerShell/PSCore
 * Support Windows/Linux
