@@ -40,6 +40,9 @@ Please vote and submit your ideas in issues.
 * Log format:  XML, JSON
 * Ship log to EventLog
 * Email Log
+* Summarize log performance
+  * How long the log ran
+  * How long each steps ran
 
 ### Other needs
 
