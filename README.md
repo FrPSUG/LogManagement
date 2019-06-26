@@ -7,9 +7,7 @@ Community module to create and manage log files
 * Log during script runtime
 * Performance aspects to keep in mind
    * High volume of write to disk
-   * Support to write to same file, or retries
-   * Possibly support parallel threads
-   * Write to share
+   * Support for multiple write at the same time to same file (add retries too ?)
 
 ## Requirements
 
@@ -26,7 +24,7 @@ Please vote and submit your ideas in issues.
 * Support Windows PowerShell/PSCore
 * Support Windows/Linux
 * Support for different timezone, UTC by default
-* Log format support: CSV, XML, JSON
+* Log format support: CSV
 * File name Format:
    * Default: `<scriptname><delimiter><datetime><delimiter>.log`
    * Example: 
@@ -44,7 +42,7 @@ Please vote and submit your ideas in issues.
 
 ### Milestone 2
 
-
+* Log format:  XML, JSON
 * Ship log to EventLog
 * Email Log
 
@@ -57,4 +55,4 @@ Please vote and submit your ideas in issues.
 ## To validate
 
 * Support for Credential
-* Support for PSDrive ?
+* Support for PSDrive
