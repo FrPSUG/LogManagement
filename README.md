@@ -43,6 +43,7 @@ Please vote and submit your ideas in issues.
 * Summarize log performance
   * How long the log ran
   * How long each steps ran
+* Log parser
 
 ### Other needs
 
