@@ -1,4 +1,6 @@
-# logmgmt
-nom temporaire
+# LogManagement
+Community module to create and manage log files
 
-Voter/proposer vos idees dans les issues
+## Requirements
+
+Please vote and submit your ideas in issues
