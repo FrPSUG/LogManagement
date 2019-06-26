@@ -39,7 +39,7 @@ Please vote and submit your ideas in issues.
 * CHANGELOG file
 * CONTRIBUTIONS file
 * Azure DevOps CI/CD
-   * Modules: InvokeBuild, BuildHelpers, PSdepend, PSDepend
+   * Modules: InvokeBuild, BuildHelpers, PSdepend, PSDeploy
    * Tasks: build, test, clean, deploy, analyze
 
 ### Milestone 2
