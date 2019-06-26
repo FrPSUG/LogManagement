@@ -33,18 +33,22 @@ Please vote and submit your ideas in issues.
    * Example: 
 * Logs should be parsable
 * Support for Header and Footer parameter
-* LICENSE file: MIT
-* CHANGELOG file
-* CONTRIBUTIONS file
-* Azure DevOps CI/CD
-   * Modules: InvokeBuild, BuildHelpers, PSdepend, PSDeploy
-   * Tasks: build, test, clean, deploy, analyze
+* Handle when file is currently in use
 
 ### Milestone 2
 
 * Log format:  XML, JSON
 * Ship log to EventLog
 * Email Log
+
+### Other needs
+
+* LICENSE file: MIT
+* CHANGELOG file
+* CONTRIBUTIONS file
+* Azure DevOps CI/CD
+   * Modules: InvokeBuild, BuildHelpers, PSdepend, PSDeploy
+   * Tasks: build, test, clean, deploy, analyze
 
 ## Commands
 
