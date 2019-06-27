@@ -64,3 +64,11 @@ Please vote and submit your ideas in issues.
 
 * Support for Credential
 * Support for PSDrive
+
+## Contribution
+
+1. Fork the repository
+1. Clone locally
+1. Run `build.ps1 -InstallDependencies`
+   1. NOTE: You need to do this only the first time
+1. Run `build.ps1 -task clean,build,test` each time you modify the code
