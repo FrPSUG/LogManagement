@@ -26,6 +26,12 @@ task -Name build {
     }
 
     # Build PSM1 file with all the functions
+    #  Retrieve classes
+    #   Write out the classes in a particular order
+    $ClassesOrder | ForEach-Object {
+        Get-Content -Path "$srcPath\classes\$($_).ps1" | Out-File -FilePath "$modulePath\$moduleName.psm1" -Append -Encoding utf8
+    }
+
     foreach($file in @($publicFiles + $privateFiles))
     {
         Get-Content -Path $($file.fullname) |
