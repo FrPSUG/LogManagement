@@ -27,6 +27,10 @@ try{
     $projectUri = "https://github.com/frpsug/$moduleName" # get from module of from source control, env var
     $licenseUri = "https://github.com/frpsug/$moduleName/blob/master/LICENSE.md"
     $tags = @('Log','Log Management')
+    $ClassesOrder =  @(
+        'Enums'
+        'Log'
+    )
     ################
 
     #$rootpath = Split-Path -path $PSScriptRoot -parent
