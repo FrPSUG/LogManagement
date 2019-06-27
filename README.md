@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/frpsug/LogManagement/_apis/build/status/FrPSUG.LogManagement?branchName=master)](https://dev.azure.com/frpsug/LogManagement/_build/latest?definitionId=1&branchName=master)
+
 # LogManagement
 
 Community module to create and manage log files
