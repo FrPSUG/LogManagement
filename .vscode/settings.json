@@ -9,5 +9,8 @@
     "[json]": {
       "editor.tabSize": 2
     },
+    "[powershell]": {
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+    },
     "files.trimTrailingWhitespace": true
 }
