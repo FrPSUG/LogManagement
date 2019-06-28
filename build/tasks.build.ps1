@@ -72,7 +72,9 @@ task -Name build {
 
 task -Name clean {
     # Output folder
-    Remove-Item -confirm:$false -Recurse -path $buildOutputPath -Force -ErrorAction Continue
+    if (Test-Path $buildOutputPath) {
+        Remove-Item -confirm:$false -Recurse -path $buildOutputPath -Force -ErrorAction Continue
+    }
 
     # Delete env variables created
     Get-ChildItem -Path env:modulepath,env:modulename,env:bh* -ErrorAction Continue | remove-item
