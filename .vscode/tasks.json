@@ -58,7 +58,22 @@
                 "showReuseMessage": false,
                 "clear": true
             },
-            "command": "Write-Host 'Invoking Build task on ${workspaceFolderBasename} module...';${workspaceFolder}/build.ps1 -task @('clean','Build') -InstallDependencies -verbose",
+            "command": "Write-Host 'Invoking Build task on ${workspaceFolderBasename} module...';${workspaceFolder}/build.ps1 -task @('setEnvironment','clean','Build') -InstallDependencies -verbose",
+            "problemMatcher": []
+        },
+        {
+            "label": "GenerateMarkdown",
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "command": "Write-Host 'Invoking Build task on ${workspaceFolderBasename} module...';${workspaceFolder}/build.ps1 -task @('setEnvironment','clean','Build','GenerateMarkdown') -InstallDependencies -verbose",
             "problemMatcher": []
         },
         {

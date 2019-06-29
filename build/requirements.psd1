@@ -14,4 +14,5 @@
     BuildHelpers = 'Latest'
     PSDeploy = 'Latest'
     InvokeBuild = 'Latest'
+    PlatyPS = 'Latest'
 }
