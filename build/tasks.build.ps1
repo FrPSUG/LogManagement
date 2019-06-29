@@ -77,14 +77,14 @@ task -name GenerateMarkdown {
     $ManifestFile = "$modulePath\$ModuleName.psd1"
 
     # Unload any module with same name
-    Get-Module -Name $ModuleName -All | Remove-Module -Force -ErrorAction Ignore
+    #Get-Module -Name $ModuleName -All | Remove-Module -Force -ErrorAction Ignore
 
     # Import Module
     $ModuleInformation = Import-Module -Name $ManifestFile -Force -ErrorAction Stop -PassThru
 
     try {
         if ($ModuleInformation.ExportedFunctions.Count -eq 0) {
-            Write-Verbose "[GENERATEMARKDOWN] No functions have been exported for this module. Skipping Markdown generation..."
+            Write-Verbose -Message "[GENERATEMARKDOWN] No functions have been exported for this module. Skipping Markdown generation..."
             return
         }
 
@@ -93,14 +93,14 @@ task -name GenerateMarkdown {
             ErrorAction           = 'SilentlyContinue'
             Locale                = 'en-US'
             Module                = $ModuleName
-            OutputFolder          = (Join-Path -path $srcPath -ChildPath "../Docs")
+            OutputFolder          = $docPath
             WithModulePage        = $true
             Force                 = $true
         }
 
         # ErrorAction is set to SilentlyContinue so this
         # command will not overwrite an existing Markdown file.
-        Write-Verbose "[GENERATEMARKDOWN] Creating new Markdown help for $($env:moduleName)..."
+        Write-Verbose -Message "[GENERATEMARKDOWN] Creating new Markdown help for $($env:moduleName)..."
         $null = New-MarkdownHelp @params
     } finally {
         Get-Module -Name $ModuleName -All | Remove-Module -Force -ErrorAction Ignore
@@ -141,11 +141,6 @@ task -Name test {
     }
 
     $results = Invoke-Pester @PesterParams
-
-    #if($results.FailedCount -gt 0)
-    #{
-    #    throw "Failed [$($results.FailedCount)] Pester tests."
-    #}
 }
 
 
