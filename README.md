@@ -29,10 +29,10 @@ Please vote and submit your ideas in issues.
 * Log format support: CSV
 * File name Format:
    * Default: `<scriptname><delimiter><datetime><delimiter>.log`
-   * Example: 
+   * Example:
 * Log line Format
    * Default: `<datetime><delimiter><messagetype><delimiter><source><delimiter><message>`
-   * Example: 
+   * Example:
 * Logs should be parsable
 * Support for Header and Footer parameter
 * Handle when file is currently in use
@@ -69,8 +69,29 @@ Please vote and submit your ideas in issues.
 
 ## Contribution
 
+### Fork the repo, edit and push back
+
 1. Fork the repository
 1. Clone locally
 1. Run `build.ps1 -InstallDependencies`
    1. NOTE: You need to do this only the first time
 1. Run `build.ps1 -task clean,build,test` each time you modify the code
+
+### Pull the changes to your fork
+
+```
+# Assuming you have a fork and did a git clone locally
+# Navigate to your local copy
+# Make sure you don't have pending changes (push them first if its the case)
+# Add the remote source repo here we call it "upstream"
+git remote add upstream https://github.com/FrPSUG/LogManagement.git
+
+# retrieve the changes from upstream
+git fetch upstream
+
+# updating your fork from original repo to keep up with their changes
+git pull upstream master
+
+# to push the code to your fork:
+git push
+```
