@@ -162,3 +162,14 @@ task -name analyze {
         $results | Format-Table -AutoSize
     }
 }
+
+task -name SyncFork {
+    Write-Verbose "[SYNCFORK][START]"
+
+    git remote add upstream https://github.com/FrPSUG/LogManagement.git
+    git fetch upstream
+    git pull upstream master
+    git push
+
+    Write-Verbose "[SYNCFORK][END]"
+}
